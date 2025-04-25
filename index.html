@@ -2,180 +2,110 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Keragaman Budaya Indonesia - Sholeh</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kebudayaan Indonesia - Versi Web</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #333333;
-      --card-bg: #f0f4f8;
-      --button-bg: #007acc;
-      --button-text: yellow;
-    }
-
-    body.dark {
-      --bg-color: #1e1e1e;
-      --text-color: #f5f5f5;
-      --card-bg: #2c2c2c;
-      --button-bg: #444;
-      --button-text: #f5f5f5;
-    }
-
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
-      transition: all 0.3s ease;
+      padding: 0;
+      margin: 0;
     }
 
-    html, body {
-      height: 100%;
+    body {
       font-family: 'Inter', sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-    }
-
-    .hero {
-      background: url('https://images.unsplash.com/photo-1541417904950-b855846fe074?auto=format&fit=crop&w=1500&q=80') no-repeat center center;
-      background-size: cover;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background-color: #f0f4f8;
+      color: #333;
       text-align: center;
-      color: white;
-      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
       padding: 2rem;
-      position: relative;
-    }
-
-    .content {
-      max-width: 700px;
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin-bottom: 1rem;
     }
 
-    p {
-      font-size: 1.3rem;
-    }
-
-    .btn {
-      margin-top: 2rem;
-      padding: 12px 24px;
-      background-color: var(--button-bg);
-      color: var(--button-text);
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-      display: inline-block;
-    }
-
-    .btn:hover {
-      opacity: 0.8;
-    }
-
-    .toggle-mode {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: rgba(255,255,255,0.2);
-      padding: 8px 16px;
-      border-radius: 8px;
-      border: none;
-      cursor: pointer;
-      color: white;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    .toggle-mode:hover {
-      background: rgba(255,255,255,0.4);
-    }
-
-    .budaya-section {
-      padding: 4rem 2rem;
-      text-align: center;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-    }
-
-    .budaya-section h2 {
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-    }
-
-    .card {
-      background-color: var(--card-bg);
+    .slide {
+      display: none;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      padding: 2rem;
+      background: white;
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      max-width: 300px;
-      padding: 1rem;
-      text-align: center;
     }
 
-    .card img {
-      width: 100%;
+    .slide.active {
+      display: block;
+    }
+
+    .slide img {
+      max-width: 100%;
       border-radius: 8px;
       margin-bottom: 1rem;
     }
 
-    .card h3 {
-      margin-bottom: 0.5rem;
-      font-size: 1.3rem;
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
     }
 
-    .card p {
+    button {
+      padding: 0.8rem 1.5rem;
       font-size: 1rem;
+      background: #007acc;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #005fa3;
     }
   </style>
 </head>
 <body>
-  <div class="hero">
-    <button class="toggle-mode" onclick="toggleDarkMode()">🌓 Mode</button>
-    <div class="content">
-      <h1>Keragaman Budaya Indonesia</h1>
-      <p>Website ini dibuat untuk mengenalkan keindahan dan kekayaan budaya Indonesia. Dibuat oleh Sholeh Yusuf sebagai latihan GitHub Pages.</p>
-      <a href="https://github.com/SholehYusuf" class="btn" target="_blank">Kunjungi GitHub Saya</a>
-    </div>
+
+  <h1>Kebudayaan Indonesia</h1>
+
+  <div class="slide active">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Tari_Pendet_Bali.jpg" alt="Tari Pendet">
+    <h2>Tari Pendet</h2>
+    <p>Tari tradisional Bali yang penuh keanggunan, biasanya ditampilkan untuk menyambut tamu.</p>
   </div>
 
-  <section class="budaya-section">
-    <h2>Ragam Budaya Indonesia</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Tari_Pendet_Bali.jpg" alt="Tari Pendet">
-        <h3>Tari Pendet</h3>
-        <p>Tari tradisional Bali yang biasanya ditampilkan untuk penyambutan tamu.</p>
-      </div>
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Wayang_Kulit_Performance.jpg" alt="Wayang Kulit">
-        <h3>Wayang Kulit</h3>
-        <p>Kesenian khas Jawa yang sudah diakui oleh UNESCO sebagai warisan budaya dunia.</p>
-      </div>
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Rumah_Gadang_Minangkabau.jpg" alt="Rumah Gadang">
-        <h3>Rumah Gadang</h3>
-        <p>Rumah adat suku Minangkabau dengan atap khas berbentuk tanduk kerbau.</p>
-      </div>
-    </div>
-  </section>
+  <div class="slide">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Wayang_Kulit_Performance.jpg" alt="Wayang Kulit">
+    <h2>Wayang Kulit</h2>
+    <p>Kesenian khas Jawa yang menampilkan bayangan tokoh wayang dengan cerita pewayangan.</p>
+  </div>
+
+  <div class="slide">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Rumah_Gadang_Minangkabau.jpg" alt="Rumah Gadang">
+    <h2>Rumah Gadang</h2>
+    <p>Rumah adat dari Minangkabau, Sumatera Barat, dengan bentuk atap menyerupai tanduk kerbau.</p>
+  </div>
+
+  <div class="buttons">
+    <button onclick="changeSlide(-1)">Sebelumnya</button>
+    <button onclick="changeSlide(1)">Berikutnya</button>
+  </div>
 
   <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark');
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+
+    function changeSlide(step) {
+      currentSlide = (currentSlide + step + slides.length) % slides.length;
+      showSlide(currentSlide);
     }
   </script>
 </body>
