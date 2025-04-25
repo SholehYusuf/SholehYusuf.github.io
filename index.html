@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kebudayaan Indonesia - Versi Web</title>
+  <title>Kebudayaan Indonesia - Sholeh Yusuf</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
       padding: 0;
       margin: 0;
+      transition: all 0.3s ease;
     }
 
     body {
@@ -19,6 +20,17 @@
       color: white;
       text-align: center;
       padding: 2rem;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+      z-index: 0;
     }
 
     h1 {
@@ -26,15 +38,19 @@
       margin-bottom: 1rem;
       position: relative;
       z-index: 1;
-      color: white;
     }
 
     .slide {
       display: none;
-      ...
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       position: relative;
       z-index: 1;
-    }
+      color: #111;
     }
 
     .slide.active {
@@ -47,10 +63,20 @@
       margin-bottom: 1rem;
     }
 
+    .slide h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    .slide p {
+      font-size: 1rem;
+    }
+
     .buttons {
       display: flex;
       justify-content: center;
       gap: 1rem;
+      position: relative;
+      z-index: 1;
     }
 
     button {
@@ -66,19 +92,11 @@
     button:hover {
       background: #005fa3;
     }
-    .overlay {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.4); /* warna hitam transparan */
-      z-index: 0;
-    }
-
   </style>
 </head>
 <body>
-<div class="overlay"></div>
+
+  <div class="overlay"></div>
 
   <h1>Kebudayaan Indonesia</h1>
 
